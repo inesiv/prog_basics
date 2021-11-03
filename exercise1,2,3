@@ -28,30 +28,21 @@ function baseExp() {
   
   var exampleModal = document.getElementById('exampleModal')
 exampleModal.addEventListener('show.bs.modal', function (event) {
-  // Button that triggered the modal
+
   var button = event.relatedTarget
 
-  // Extract info from data-bs-* attributes
-  var exerciseTitle = button.getAttribute('data-bs-whatever')   // 
+  var exerciseTitle = button.getAttribute('data-bs')  
 
-  // If necessary, you could initiate an AJAX request here
-  // and then do the updating in a callback.
-  //
-  // Update the modal's content.
+
   var modalTitle = exampleModal.querySelector('.modal-title')
   var modalBodyInput = exampleModal.querySelector('.modal-body input')
 
-  var modalBodyAnswer = exampleModal.getElementById("answer") // test ???
+  var modalBodyAnswer = exampleModal.getElementById("answer") 
 
   modalTitle.textContent = exerciseTitle + ' calculator'
-  // modalBodyInput.value = recipient
 
-  modalBodyAnswer.value = 123 // test
 
-  // document.getElementById("answer").textContent = baseExp(Number(document.getElementById("base-number").value), Number(document.getElementById("exponent-number").value));
-
-})
-
+  modalBodyAnswer.value = 123 
 
 
 
@@ -60,13 +51,11 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 // Harjutus 2
 
-// potential penalty
 function potentailPenalty(name,actualSpeed,allowedSpeed) {
-  var penalty = ( actualSpeed - allowedSpeed ) * 3; // base^exponent ehk 2^4 = 16
+  var penalty = ( actualSpeed - allowedSpeed ) * 3; 
   return penalty
 }
 
-// potential fine
 function potentailFine() {
 
   let name;
@@ -100,13 +89,13 @@ function ekap() {
   let weeksAmount;
   weeksAmount = Number(document.getElementById("weeks-amount").value)
   
-  if (ekapAmount != null && weeksAmount != null) { // empty or not
+  if (ekapAmount != null && weeksAmount != null) { 
 
-      var ajaKulu = (( 26 * ekapAmount ) / weeksAmount ); // calculation
+      var ajaKulu = (( 26 * ekapAmount ) / weeksAmount ); 
 
-      ajaKulu = Math.round(ajaKulu); // round to the nearest integer
+      ajaKulu = Math.round(ajaKulu); 
       
-      // document.getElementById("ajakulu").textContent = "Your ajakulu is: " + ajaKulu;
+     
 
       document.getElementById("ajakulu").innerHTML = "EKAP amout: " + ekapAmount + "<br/>Amount of weeks: " + weeksAmount + "<br />Ajakulu is " + ajaKulu + " hours per week <br /><br /> <p class=\"text-muted\">ajakulu = ( 26 * EKAP ) / week_amount<br />ajakulu = Math.round(ajakulu)</p>";
 
@@ -143,7 +132,7 @@ function pulseRate() {
       pulseRateMax = 220 - age;
     }
     
-    // training type
+
     let minPulse;
     let maxPulse;
     
