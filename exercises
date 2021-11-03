@@ -49,7 +49,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 
 
-// Harjutus 2
+// Harjutus 2 (trahvid)
 
 function potentailPenalty(name,actualSpeed,allowedSpeed) {
   var penalty = ( actualSpeed - allowedSpeed ) * 3; 
@@ -79,7 +79,7 @@ function potentailFine() {
 }
 
 
-// Harjutus 3
+// Harjutus 3 (ajakulu)
 
 function ekap() {
 
@@ -104,7 +104,7 @@ function ekap() {
 }
 
 
-// Harjutus 4
+// Harjutus 4 (pulss)
 
 function pulseRate() {
 
@@ -155,6 +155,30 @@ function pulseRate() {
     document.getElementById("pulse-rate").innerHTML = " Your pulse rate must be in " + minPulse + " - " + maxPulse + " range.";
 
   }
+}
+
+
+
+// harjutus 5 (spämm)
+
+let suurus = prompt("Sisesta kirja suurus (MB):");
+let teema = prompt("Sisesta kirja teema:");
+let fail = prompt("Kas kirjaga on kaasas fail (jah, ei)?");
+
+if (teema !== "") {
+    if (suurus > 1) {
+        if (fail === "jah") {
+            console.log("See on spämm!")
+
+        } else {
+            console.log("See ei ole spämm.")
+        }
+
+    } else {
+        console.log("See ei ole spämm");
+    } 
+} else {
+    console.log("See on spämm")
 }
 
   
