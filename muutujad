@@ -1,0 +1,110 @@
+
+// Harjutus 1.3 (astendamine)
+
+function baseExp() {
+
+  
+    let base;
+    base = Number(document.getElementById("base-number").value)
+  
+    let exponent;
+    exponent = Number(document.getElementById("exponent-number").value)
+    
+    if (isNaN(base) || isNaN(exponent)) { 
+  
+      document.getElementById("answer").innerHTML = "<br />Input is not a number"
+  
+    } else {
+  
+      result = base ** exponent; 
+  
+      document.getElementById("answer").innerHTML = "<br />" + base + "<sup>" + exponent + "</sup>" + " = " + result;
+
+  
+      return result;
+  
+    }
+  }
+  
+  var exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', function (event) {
+
+  var button = event.relatedTarget
+
+  var exerciseTitle = button.getAttribute('data-bs')  
+
+
+  var modalTitle = exampleModal.querySelector('.modal-title')
+  var modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+  var modalBodyAnswer = exampleModal.getElementById("answer") 
+
+  modalTitle.textContent = exerciseTitle + ' calculator'
+
+
+  modalBodyAnswer.value = 123 
+
+
+
+
+
+
+// Harjutus 1.4 (trahvid)
+
+function potentailPenalty(name,actualSpeed,allowedSpeed) {
+  var penalty = ( actualSpeed - allowedSpeed ) * 3; 
+  return penalty
+}
+
+function potentailFine() {
+
+  let name;
+  name = String(document.getElementById("recipient-name").value)
+
+  let allowedSpeed;
+  allowedSpeed = Number(document.getElementById("allowed-speed").value)
+
+  let actualSpeed;
+  actualSpeed = Number(document.getElementById("actual-speed").value)
+
+  var fine = ( actualSpeed - allowedSpeed ) * 3; 
+
+  let fineRate = (fine >= 190) ? "Max rate" : "Regular rate";
+
+  finalFine = (fine >= 190) ? 190 : fine
+  
+  document.getElementById("fine").innerHTML = "Your fine is: " + finalFine + "â‚¬ <br />" + fineRate
+
+  return fine
+}
+
+
+// Harjutus 1.5 (ajakulu)
+
+function ekap() {
+
+  let ekapAmount;
+  ekapAmount = Number(document.getElementById("ekap").value)
+
+  let weeksAmount;
+  weeksAmount = Number(document.getElementById("weeks-amount").value)
+  
+  if (ekapAmount != null && weeksAmount != null) { 
+
+      var ajaKulu = (( 26 * ekapAmount ) / weeksAmount ); 
+
+      ajaKulu = Math.round(ajaKulu); 
+      
+     
+
+      document.getElementById("ajakulu").innerHTML = "EKAP amout: " + ekapAmount + "<br/>Amount of weeks: " + weeksAmount + "<br />Ajakulu is " + ajaKulu + " hours per week <br /><br /> <p class=\"text-muted\">ajakulu = ( 26 * EKAP ) / week_amount<br />ajakulu = Math.round(ajakulu)</p>";
+
+
+  }
+}
+
+
+
+
+
+  
