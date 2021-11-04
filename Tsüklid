@@ -1,0 +1,27 @@
+// harjutus 3.1 (äratamine)
+
+let kordus = prompt('Mitu korda tuleb äratada: ');
+
+// for tsükkel
+for(let kord = 1; kord <= kordus; kord++){
+  console.log('tõuse ja sära');
+  
+  
+// harjutus 3.2 ()
+
+let ringid = prompt(''Mitu ringi tuleb joosta: ');
+let porgandid = 0;
+
+// for tsükkel
+let ring = 1;
+while(ring <= ringid){
+  if(ring % 2 == 0){
+    porgandid = porgandid + ring;
+  }
+  ring++;
+}
+console.log('Porgandite koguarv on ' + porgandid)
+
+
+// harjutus 3.3 (täringu mäng)
+
