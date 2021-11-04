@@ -181,4 +181,47 @@ if (teema !== "") {
     console.log("See on spämm")
 }
 
+// harjutus 5 (istekoht)
+
+// kasutaja sisend
+let valik = prompt(‘Kas soovite istekoht ise valida või loosiga: ‘);
+// tingimuslause
+// valik kontroll
+
+if(valik === ‘ise’){
+
+	// ise valib
+  console.log(‘Valisite ise.’);
+	let koht = prompt(‘Kas soovite istuda akna ääres või muu koha peal? ‘);
+	if(koht === aken){
+	console.log(‘Aknakoht’);
+} else {
+	console.log(‘Muu koht’);
+	}
+}
+else [
+  // loos
+   console.log('Istekoht loositi.');
+  let toenaolsus = Math.trunc(Math.ceil(Math.random()*3));
+  if(toenaolsus) === 1){
+  console.log('Aknakoht');
+  } else {
+  console.log('Muu koht');
+
+
+
+
+
+// harjutus 6 (jäätumine)
+
+// kasutaja sisend
+let temperatuur = prompt( ‘Sisesta õhutemperatuur: ‘)
+
+// tingimuslause
+if(temperatuur > 4.0 {
+	console.log(‘Ei ole jäätumise ohtu’)
+} else {
+	console.log(‘On jäätumise oht’)
+}
+
   
