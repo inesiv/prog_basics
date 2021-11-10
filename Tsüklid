@@ -7,7 +7,7 @@ for(let kord = 1; kord <= kordus; kord++){
   console.log('tõuse ja sära');
   
   
-// harjutus 3.2 ()
+// harjutus 3.2 (Jänesevanemate mure)
 
 let ringid = prompt(''Mitu ringi tuleb joosta: ');
 let porgandid = 0;
@@ -25,3 +25,53 @@ console.log('Porgandite koguarv on ' + porgandid)
 
 // harjutus 3.3 (täringu mäng)
 
+ let random_numbers;
+ random_numbers = Number(document.getElementById("random-numbers").value)
+
+ if (isNaN(random_numbers)) { 
+
+   document.getElementById("random_output").innerHTML = "<br />Input is not a number"
+
+ } else {
+ 
+ let text = ""
+ for (let i = 0; i < random_numbers; i++) {
+   text += "<br /> " + Math.floor((Math.random() * 6) + 1);
+ }
+ document.getElementById("random_output").innerHTML = text
+ 
+ }
+ 
+}
+
+// harjutus 3.4 (Õunte jagamine)
+
+function appleLoop() {
+
+    let dwarfs;
+    dwarfs = Number(document.getElementById("dwarfs-number").value)
+  
+    let apples_total;
+    apples_total = Number(document.getElementById("apples-number").value)
+    
+    if (isNaN(dwarfs) || isNaN(apples_total)) { 
+  
+      document.getElementById("apple_output").innerHTML = "<br />Input is not a number"
+  
+    } else {
+  
+      let text = ""
+      for (let i = 1; i <= dwarfs; i++) {
+        let apples = Math.floor(Math.random() * 2) + 1
+        apples_total = apples_total - apples
+        text += "<br />" + i + " . dwarf got " + apples 
+        console.log(i + " . dwarf got " + apples)
+      } 
+  
+      document.getElementById("apple_output").innerHTML = text + "<p class=\"mb-0 opacity-50\">Snow white is left with " + apples_total + " apples.</p>"
+  
+    }
+    
+  }
+  
+ 
